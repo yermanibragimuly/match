@@ -96,7 +96,7 @@ class ViewController: UIViewController {
     
     func checkWin() {
         if state.allSatisfy({ $0 == 2 }) {
-            let alert = UIAlertController(title: "Победа!", message: "Ты открыл все пары!", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Поздравляем, вы закончили игру за \(secondsElapsed) секунд и \(countSteps) ходов", message: "Ты открыл все пары!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Сыграть снова", style: .default, handler: { _ in
                 self.resetGame()
             }))
